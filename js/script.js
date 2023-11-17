@@ -64,3 +64,10 @@ window.onclick = (e) => {
     itemDetailModal.style.display = 'none';
   }
 };
+
+// clear before form unload
+window.onbeforeunload = () => {
+  for (const form of document.getElementsByTagName("form")) {
+    form.reset();
+  }
+}
